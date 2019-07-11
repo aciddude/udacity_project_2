@@ -271,7 +271,6 @@ Resources:
       SubnetId:
         Ref: PublicSub1
       AvailabilityZone: !Select [ 0, !GetAZs '' ]
-      KeyName: udacity-dev
       SecurityGroupIds:
         - Ref: SecurityGroupBastion
 
@@ -317,7 +316,6 @@ Resources:
             aws s3 cp s3://udacity-deploy-iac-project-2/code.tgz .
             tar -xzvf code.tgz .
             chown -R www-data:www-data .
-      KeyName: udacity-dev
       ImageId: ami-01e6a0b85de033c99
       IamInstanceProfile:
         Ref: ListS3BucketsInstanceProfile
