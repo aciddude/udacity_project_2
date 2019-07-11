@@ -314,7 +314,7 @@ Resources:
 
             cd /var/www/html
             aws s3 cp s3://udacity-deploy-iac-project-2/code.tgz .
-            tar -xzvf code.tgz .
+            tar -xzvf code.tgz
             chown -R www-data:www-data .
       ImageId: ami-01e6a0b85de033c99
       IamInstanceProfile:
